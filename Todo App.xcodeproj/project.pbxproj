@@ -14,6 +14,7 @@
 		1976B44725DA1EC500925201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1976B44625DA1EC500925201 /* Assets.xcassets */; };
 		1976B44A25DA1EC500925201 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1976B44925DA1EC500925201 /* Preview Assets.xcassets */; };
 		1976B44D25DA1EC500925201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1976B44B25DA1EC500925201 /* LaunchScreen.storyboard */; };
+		1976B45825DA1F3F00925201 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B45725DA1F3F00925201 /* AddTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1976B44925DA1EC500925201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1976B44C25DA1EC500925201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1976B44E25DA1EC500925201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1976B45725DA1F3F00925201 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,9 @@
 		1976B43C25DA1EC300925201 /* Todo App */ = {
 			isa = PBXGroup;
 			children = (
-				1976B43D25DA1EC300925201 /* AppDelegate.swift */,
+				1976B45525DA1EDB00925201 /* View */,
 				1976B43F25DA1EC300925201 /* SceneDelegate.swift */,
-				1976B44125DA1EC300925201 /* ContentView.swift */,
+				1976B43D25DA1EC300925201 /* AppDelegate.swift */,
 				1976B44625DA1EC500925201 /* Assets.xcassets */,
 				1976B44B25DA1EC500925201 /* LaunchScreen.storyboard */,
 				1976B44E25DA1EC500925201 /* Info.plist */,
@@ -76,6 +78,15 @@
 				1976B44925DA1EC500925201 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1976B45525DA1EDB00925201 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1976B44125DA1EC300925201 /* ContentView.swift */,
+				1976B45725DA1F3F00925201 /* AddTodoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				1976B44025DA1EC300925201 /* SceneDelegate.swift in Sources */,
 				1976B44225DA1EC300925201 /* ContentView.swift in Sources */,
 				1976B44525DA1EC300925201 /* Todo_App.xcdatamodeld in Sources */,
+				1976B45825DA1F3F00925201 /* AddTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
