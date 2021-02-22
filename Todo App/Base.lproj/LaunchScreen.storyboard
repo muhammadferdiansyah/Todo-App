@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="todo-app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xwu-bO-UzY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="todo-app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="jRN-O4-yIY">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="4Os-pZ-lJF"/>
-                                    <constraint firstAttribute="height" constant="96" id="xmH-XN-dug"/>
+                                    <constraint firstAttribute="width" constant="96" id="IYD-Wn-vn5"/>
+                                    <constraint firstAttribute="height" constant="96" id="OgX-KL-etz"/>
                                 </constraints>
                             </imageView>
                         </subviews>

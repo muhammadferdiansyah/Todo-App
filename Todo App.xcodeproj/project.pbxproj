@@ -15,6 +15,9 @@
 		1976B44A25DA1EC500925201 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1976B44925DA1EC500925201 /* Preview Assets.xcassets */; };
 		1976B44D25DA1EC500925201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1976B44B25DA1EC500925201 /* LaunchScreen.storyboard */; };
 		1976B45825DA1F3F00925201 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B45725DA1F3F00925201 /* AddTodoView.swift */; };
+		1995E75B25E35B3E00D7CE21 /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1995E75A25E35B3E00D7CE21 /* FormRowStaticView.swift */; };
+		1995E75E25E35EC600D7CE21 /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1995E75D25E35EC600D7CE21 /* FormRowLinkView.swift */; };
+		1995E76125E364BD00D7CE21 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1995E76025E364BD00D7CE21 /* SettingsView.swift */; };
 		19AF7DD525DE1A0F00A93858 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF7DD425DE1A0F00A93858 /* EmptyListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		1976B44C25DA1EC500925201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1976B44E25DA1EC500925201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1976B45725DA1F3F00925201 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		1995E75A25E35B3E00D7CE21 /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
+		1995E75D25E35EC600D7CE21 /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
+		1995E76025E364BD00D7CE21 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		19AF7DD425DE1A0F00A93858 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +94,9 @@
 				1976B44125DA1EC300925201 /* ContentView.swift */,
 				1976B45725DA1F3F00925201 /* AddTodoView.swift */,
 				19AF7DD425DE1A0F00A93858 /* EmptyListView.swift */,
+				1995E75A25E35B3E00D7CE21 /* FormRowStaticView.swift */,
+				1995E75D25E35EC600D7CE21 /* FormRowLinkView.swift */,
+				1995E76025E364BD00D7CE21 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,10 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1995E75B25E35B3E00D7CE21 /* FormRowStaticView.swift in Sources */,
 				1976B43E25DA1EC300925201 /* AppDelegate.swift in Sources */,
 				1976B44025DA1EC300925201 /* SceneDelegate.swift in Sources */,
+				1995E76125E364BD00D7CE21 /* SettingsView.swift in Sources */,
 				19AF7DD525DE1A0F00A93858 /* EmptyListView.swift in Sources */,
 				1976B44225DA1EC300925201 /* ContentView.swift in Sources */,
+				1995E75E25E35EC600D7CE21 /* FormRowLinkView.swift in Sources */,
 				1976B44525DA1EC300925201 /* Todo_App.xcdatamodeld in Sources */,
 				1976B45825DA1F3F00925201 /* AddTodoView.swift in Sources */,
 			);
