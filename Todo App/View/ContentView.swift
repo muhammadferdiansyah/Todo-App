@@ -14,6 +14,9 @@ struct ContentView: View {
   @FetchRequest(entity: Todo.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Todo.name, ascending: true)]) var todos: FetchedResults<Todo>
   
   @State private var showingAddTodoView: Bool = false
+  @State private var showingSettingsView: Bool = false
+  
+  @EnvironmentObject var iconSettings: IconNames
   
   var body: some View {
     NavigationView{
@@ -37,12 +40,15 @@ struct ContentView: View {
           trailing:
             // shift tab harus di select dulu => buat mindahin ke kiri
             Button(action: {
-              self.showingAddTodoView.toggle()
+              // diganti jadi showingSettingsView
+              self.showingSettingsView.toggle()
             }){
-              Image(systemName: "plus")
+              Image(systemName: "gear")
             }
-          .sheet(isPresented: $showingAddTodoView){
-            AddTodoView().environment(\.managedObjectContext, self.managedObjectContext)
+            // diganti jadi showingSettingsView
+          .sheet(isPresented: $showingSettingsView){
+            // diganti jadi SettingsView
+            SettingsView().environmentObject(self.iconSettings)
           }
         )
         
