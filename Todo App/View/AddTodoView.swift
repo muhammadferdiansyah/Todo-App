@@ -12,14 +12,17 @@ struct AddTodoView: View {
   @Environment(\.managedObjectContext) var managedObjectContext
   @Environment(\.presentationMode) var presentationMode
   
-  @State private var name: String = ""
-  @State private var priority: String = "Normal"
+  @State private var name : String = ""
+  @State private var priority : String = "Normal"
   
-  let priorities = ["High", "Normal", "Low"]
+  let priorities = ["High" , "Normal" , "Low"]
   
   @State private var errorShowing: Bool = false
   @State private var errorTitle: String = ""
   @State private var errorMessage: String = ""
+  
+  @ObservedObject var theme = ThemeSettings.shared
+  var themes: [Theme] = themeData
   
   var body: some View {
     NavigationView{
@@ -31,7 +34,7 @@ struct AddTodoView: View {
             .cornerRadius(9)
             .font(.system(size: 24, weight: .bold, design: .default))
           
-          Picker("Priority", selection: $priority){
+          Picker("Priority" ,selection: $priority){
             ForEach(priorities, id: \.self){
               Text($0)
             }
@@ -46,14 +49,14 @@ struct AddTodoView: View {
               
               do{
                 try self.managedObjectContext.save()
-                print("New todo: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
+                print("New Todo: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
               } catch{
                 print(error)
               }
             } else {
               self.errorShowing = true
               self.errorTitle = "Invalid Name"
-              self.errorMessage = "Make sure to enter something for\nthe new todo item"
+              self.errorMessage = "Make Sure to Enter Something for\nthe New Todo Item"
               return
             }
             self.presentationMode.wrappedValue.dismiss()
@@ -63,17 +66,17 @@ struct AddTodoView: View {
               .font(.system(size: 24, weight: .bold, design: .default))
               .padding()
               .frame(minWidth: 0, maxWidth: .infinity)
-              .background(Color.blue)
+              .background(themes[self.theme.themeSettings].themeColor)
               .cornerRadius(9)
               .foregroundColor(Color.white)
           }
         }
         .padding(.horizontal)
         .padding(.vertical, 30)
-        
         Spacer()
       }
-      .navigationBarTitle("New Todo", displayMode: .inline)
+      
+      .navigationBarTitle("New Todo",displayMode: .inline)
       .navigationBarItems(trailing:
                             Button(action: {
                               self.presentationMode.wrappedValue.dismiss()
@@ -81,9 +84,11 @@ struct AddTodoView: View {
                               Image(systemName: "xmark")
                             })
       .alert(isPresented: $errorShowing){
-        Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+        Alert(title: Text(errorTitle),message: Text(errorMessage), dismissButton: .default(Text("OK")))
       }
     }
+    .accentColor(themes[self.theme.themeSettings].themeColor)
+    .navigationViewStyle(StackNavigationViewStyle())
   }
 }
 
